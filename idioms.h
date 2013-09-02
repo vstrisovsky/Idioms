@@ -13,6 +13,7 @@ void testAccessKey();
 void testEnableIf();
 void testStaticPolymorphism();
 void testScopeGuard11();
+void testMixin();
 void test();
 
 

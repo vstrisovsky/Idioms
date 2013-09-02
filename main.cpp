@@ -15,14 +15,12 @@ using namespace std;
  */
 int main(int argc, char** argv)
 {
-    testAccessKey();
-    
-    //test();
-   
     
 //    testAttorneyClient();
+//    testAccessKey();
 //    testEnableIf();
 //    testStaticPolymorphism();
+    testMixin();
 //    testScopeGuard11();
 //   return 0;
 }
