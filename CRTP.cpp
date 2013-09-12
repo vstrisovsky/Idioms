@@ -1,3 +1,5 @@
+// http://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Curiously_Recurring_Template_Pattern
+
 #include <iostream>
 #include "idioms.h"
 

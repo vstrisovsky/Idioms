@@ -15,8 +15,8 @@ using namespace std;
  */
 int main(int argc, char** argv)
 {
-    
-    testAttorneyClient();
+  testCVDI();  
+//    testAttorneyClient();
 //    testAccessKey();
 //    testEnableIf();
 //    testStaticPolymorphism();
