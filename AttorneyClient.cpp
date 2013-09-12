@@ -2,58 +2,61 @@
 
 #include "idioms.h"
 
-class Base
+namespace idiom_attorney
 {
-private:
-    virtual void Func(int x) = 0;
-    friend class Attorney;
-public:
 
-    virtual ~Base()
-    {
-    }
-};
-
-class Derived : public Base
+class Elevator
 {
-private:
+    bool _broken;
 
-    virtual void Func(int x)
+    void setRepaired()
     {
-        std::cout << "Derived::Func" << std::endl;
+        _broken = false;
+        std::cout << "Elavator is repaired" << std::endl;
     }
 
 public:
-
-    ~Derived()
+    friend class Repair;
+    
+    Elevator()
+    :   _broken(false)
     {
+    }
+
+    void setBroken()
+    {
+        _broken = true;
+    }
+
+};
+
+class Repair
+{
+    static void setRepaired(Elevator& e)
+    {
+        e.setRepaired();
+    }
+    friend class Repairman;
+};
+
+class Repairman
+{
+    Repair r;
+public:
+    void fix(Elevator& e)
+    {
+        r.setRepaired(e);
     }
 };
 
-class Attorney
-{
-
-    static void callFunc(Base & b, int x)
-    {
-        b.Func(x);
-    }
-    friend struct Test;
-};
-
-struct Test
-{
-    Derived d;
-    Attorney a;
-
-    void callFunc()
-    {
-        a.callFunc(d, 3);
-    }
 };
 
 void testAttorneyClient()
 {
-    Test t;
-    t.callFunc();
-
+    using namespace idiom_attorney;
+    
+    Elevator elevator;
+    elevator.setBroken();
+    Repairman repairman;
+    repairman.fix(elevator);
 }

@@ -16,11 +16,11 @@ using namespace std;
 int main(int argc, char** argv)
 {
     
-//    testAttorneyClient();
+    testAttorneyClient();
 //    testAccessKey();
 //    testEnableIf();
 //    testStaticPolymorphism();
-    testMixin();
+//    testMixin();
 //    testScopeGuard11();
 //   return 0;
 }
