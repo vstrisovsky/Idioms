@@ -1,4 +1,7 @@
+// http://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Scope_Guard
+
 #include "idioms.h"
+
 #include <utility>
 #include <iostream>
 

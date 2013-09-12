@@ -1,9 +1,11 @@
+// http://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/enable-if
+
+#include "idioms.h"
+
 #include <type_traits>
 #include <stdlib.h>
 #include <string.h>
 #include <iostream>
-
-#include "idioms.h"
 
 template <bool, class T = void>
 struct enable_if
